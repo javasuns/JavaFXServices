@@ -44,16 +44,22 @@ You can run the regular tasks to build and run your project as a regular VM proj
     
 Once the project is ready, the plugin has these three main tasks:    
 
-#### `nativeCompile`
+#### `Compiling for Desktop`
 
-This tasks does the AOT compilation. It is a very intensive and lengthy task (several minutes, depending on your project and CPU), 
-so it should be called only when the project is ready and runs fine on a VM.
+This tasks does the AOT compilation. It is a very intensive and lengthy task (several minutes, depending on your project and CPU).
 
 Run:
 
-    ./gradlew build nativeCompile
+    gradlew nativeBuild
+    
+#### `Compiling for Mobile (iOS)`
 
-The results will be available at `$buildDir/client/gvm`.
+Make sure that you have completed the list in build.info with the necessary information before compiling to iOS. 
+This task can be run only on MacOS (Read more at .....)
+
+Run:
+
+    gradlew nativeBuild -ptarget=ios
 
 #### `nativeLink`
 
