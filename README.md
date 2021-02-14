@@ -4,6 +4,11 @@ This software leverages the [Gluon Client plugin for Gradle](https://github.com/
 
 [![BSD-3 license](https://img.shields.io/badge/license-BSD--3-%230778B9.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
+## Screenshots
+
+<img src="https://bitbucket.org/javasuns/javafx-services/downloads/Windows_-_Native_Main.png?raw=1" width="160"/> <img src="https://bitbucket.org/javasuns/javafx-services/downloads/Windows_-_Native_Device.png?raw=1" width="160"/>
+<img src="https://bitbucket.org/javasuns/javafx-services/downloads/MacOS_X_-_Native_Main.png" width="160"/><img src="https://bitbucket.org/javasuns/javafx-services/downloads/MacOS_X_-_Native_Device.png" width="160"/>
+
 
 ## Getting started
 
