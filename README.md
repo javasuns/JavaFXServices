@@ -1,6 +1,6 @@
 # JavaFX Services (Gradle)
 
-This software leverages the [Gluon Client plugin for Gradle](https://github.com/gluonhq/client-gradle-plugin) which is able to compile the application into native code along with its required dependencies, so it can directly be executed as a native application on the target platform. Cross-platform compatibility is achieved through [Gluon Attach](https://gluonhq.com/products/mobile/attach). The software utilizes some of its pre-built services (Browser, Device, Push Notifications and Share) 
+This software leverages the [Gluon Client plugin for Gradle](https://github.com/gluonhq/client-gradle-plugin) for compiling the application into native code along with its required dependencies, so it can directly be executed as a native application on the target platform. Mobile hardware access is achieved through [Gluon Attach](https://gluonhq.com/products/mobile/attach). The software utilizes some of its pre-built services (Browser, Device, Push Notifications and Share) 
 
 [![BSD-3 license](https://img.shields.io/badge/license-BSD--3-%230778B9.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
@@ -69,6 +69,6 @@ Alternatively, you may combine all the above commands into one line
     
 ### Requirements
 
-Check the requirements for the [target platform](https://docs.gluonhq.com/#_platforms) before you get started.
+More information on platform requirements you may check the [target platform](https://docs.gluonhq.com/#_platforms) section on Gluon webiste.
 
 
