@@ -69,6 +69,6 @@ Alternatively, you may combine all the above commands into one line
     
 ### Requirements
 
-More information on platform requirements you may check the [target platform](https://docs.gluonhq.com/#_platforms) section on Gluon webiste.
+More information on platform requirements you may check the [target platform](https://docs.gluonhq.com/#_platforms) section on Gluon website.
 
 
