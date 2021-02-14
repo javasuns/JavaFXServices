@@ -1,0 +1,58 @@
+* {
+	 /** @SuppressWarnings */
+	-fx-pressed_color: black;
+	 /** @SuppressWarnings */
+	-fx-highlighted_color: #F0F0F0;
+}
+
+.button {
+	-fx-padding: 0;
+	-fx-backgournd-insets: 0 0 ;
+	-fx-background-radius: 0 0;
+	-fx-background-color: white;
+}
+
+.row {
+	-fx-min-height: 4.5em;
+    -fx-padding: 0.6em;
+    -fx-border-color: transparent transparent lightgrey transparent;
+    -fx-spacing: 0.6em;
+}
+
+.row > .label {
+	-fx-text-fill: -fx-options-color;
+}
+
+.row_icon {
+	-fx-pref-width: 1.6em;
+	-fx-min-width: 1.6em;
+	-fx-max-width: 1.6em;
+	-fx-pref-height: 1.6em;
+	-fx-min-height: 1.6em;
+	-fx-max-height: 1.6em;
+	-fx-background-color: -fx-options-color;
+}
+.row:hover {
+	-fx-background-color: -fx-highlighted_color;
+}
+.row:pressed {
+	-fx-background-color: -fx-highlighted_color;
+}
+
+.row:pressed > .label {
+	-fx-text-fill: -fx-pressed_color;
+}
+
+.row:pressed > .row_icon {
+	-fx-background-color: -fx-pressed_color;
+}
+
+.row:pressed > .left_arrow {
+	-fx-background-color: -fx-pressed_color;
+}
+
+.gap_row {
+	-fx-pref-height: 0.05em;
+	-fx-background-color:  lightgray;
+}
+

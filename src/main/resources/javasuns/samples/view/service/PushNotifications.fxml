@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="rootPane" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javasuns.samples.controller.service.PushNotificationsController">
+   <top>
+      <fx:include fx:id="header" source="../header/Header.fxml" />
+   </top>
+   <center>
+      <VBox alignment="CENTER" maxWidth="-Infinity" style="-fx-padding: 1em; -fx-spacing: 1.5em;">
+         <children>
+            <VBox fx:id="vBoxToken" alignment="CENTER" style="-fx-max-width: 20em;">
+               <children>
+                  <Label style="-fx-underline: true; -fx-font-weight: bold;" text="Token" />
+                  <Label fx:id="lblToken" wrapText="true" />
+               </children>
+            </VBox>
+            <Button fx:id="btnEnable" alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Enable Notifications" />
+            <Label fx:id="lblReadMore" style="-fx-font-size: 1.3em; -fx-font-weight: bold; -fx-underline: true;" text="Sending a Push Notification (Setup)&#10;Read More" textAlignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Region maxWidth="1.7976931348623157E308" rotate="180.0" style="-fx-min-height: 10em; -fx-max-width: 10em; -fx-background-color: -fx-options-color;" styleClass="svg_notifications" />
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

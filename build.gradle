@@ -1,0 +1,84 @@
+plugins {
+    id 'application'
+    id 'java'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
+    id 'com.gluonhq.client-gradle-plugin' version '0.1.36'
+}
+group = 'javasuns.samples'
+version = '1.0'
+
+/********* Properties **********/
+ext.GLUON_ATTACH_VER = "4.0.10"
+ext.TARGET = project.hasProperty('target') ? project.getProperty('target') : "Desktop"
+/*******************************/
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven { url "https://nexus.gluonhq.com/nexus/content/repositories/releases" }
+}
+
+// Enable Module Conventions
+java.modularity.inferModulePath = true          
+
+javafx {
+    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.web', 'javafx.graphics' ]
+}
+
+application {
+     mainModule = 'javasuns.samples'
+     mainClass  = 'javasuns.samples.Services'
+}
+
+mainClassName  = 'javasuns.samples.Services'
+
+gluonClient {
+	if("$TARGET" == "ios")
+	  target="ios"        
+
+    release {
+      bundleName='JavaFXServices'
+      bundleVersion=1.0
+      bundleShortVersion=1.0
+      providedSigningIdentity='<USE YOUR SIGNING IDENTITY>'
+      providedProvisioningProfile='<USE YOUR PROVISION PROFILE>'
+      skipSigning=false
+    } 
+
+	attachConfig {
+        version = "$GLUON_ATTACH_VER"
+        services 'device', 'browser','statusbar','share','push-notifications','runtime-args'
+    }
+
+    reflectionList = [
+                "javasuns.samples.ServicesFX",
+                "javasuns.samples.ServicesPreloader",
+               	"javasuns.samples.controller.MainScreenController", 
+		"javasuns.samples.controller.header.HeaderController",
+		"javasuns.samples.controller.interfaces.Controller",
+		"javasuns.samples.controller.popup.MessageController",
+		"javasuns.samples.controller.service.BrowserController",
+		"javasuns.samples.controller.service.DeviceInfoController",
+		"javasuns.samples.controller.service.ServicesController",
+		"javasuns.samples.controller.service.PushNotificationsController",
+		"javasuns.samples.controller.service.ShareContentController",
+		"javasuns.samples.controller.tabs.TabController",
+                "javafx.fxml.FXMLLoader",
+                "javafx.scene.control.Button",
+                "javafx.scene.control.Label",
+                "javafx.scene.control.ProgressIndicator",
+                "javafx.scene.layout.AnchorPane",
+                "javafx.scene.layout.ColumnConstraints",
+                "javafx.scene.layout.GridPane",
+                "javafx.scene.layout.Region",
+                "javafx.scene.layout.RowConstraints",
+                "javafx.scene.layout.StackPane",
+                "javafx.scene.layout.HBox",
+                "javafx.scene.layout.VBox",
+                "javafx.scene.control.OverrunStyle",
+                "javafx.scene.CacheHint",
+                "javafx.scene.Cursor",
+                "javafx.geometry.NodeOrientation"
+	]
+}
+

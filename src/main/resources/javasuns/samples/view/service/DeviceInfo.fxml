@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="rootPane" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javasuns.samples.controller.service.DeviceInfoController">
+   <top>
+      <fx:include fx:id="header" source="../header/Header.fxml" />
+   </top>
+   <center>
+      <VBox alignment="CENTER" maxWidth="-Infinity" style="-fx-padding: 1em; -fx-spacing: 1.5em;">
+         <children>
+            <GridPane style="-fx-vgap: 0.2em; -fx-hgap: 0.7em; -fx-max-width: 20em;">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="NEVER" minWidth="-Infinity" />
+                  <ColumnConstraints hgrow="SOMETIMES" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="increased_font_and_bold" text="Platform:" />
+                  <Label alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="increased_font_and_bold" text="Model:" GridPane.rowIndex="1" />
+                  <Label alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="increased_font_and_bold" text="Version:" GridPane.rowIndex="2" />
+                  <Label alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="increased_font_and_bold" text="UUID:" GridPane.rowIndex="3" />
+                  <Label fx:id="lblPlatform" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-line-spacing: 0.2em;" styleClass="increased_font" text="\%PLATFORM%" wrapText="true" GridPane.columnIndex="1" />
+                  <Label fx:id="lblModel" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="increased_font" text="\%MODEL%" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="lblVersion" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="increased_font" text="\%VERSION%" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label fx:id="lblUUID" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="increased_font" text="\%UUID%" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+            <Region maxWidth="1.7976931348623157E308" nodeOrientation="RIGHT_TO_LEFT" style="-fx-min-height: 10em; -fx-max-width: 10em; -fx-background-color: -fx-options-color;" styleClass="svg_device" />
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

@@ -1,0 +1,13 @@
+pluginManagement {
+    repositories {
+    	maven { url "https://plugins.gradle.org/m2/" }
+	    maven { url "https://nexus.gluonhq.com/nexus/content/repositories/releases" }
+	    maven { url "https://nexus.gluonhq.com/nexus/content/repositories/public-snapshots" }
+	    maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+		gradlePluginPortal()
+    }
+}
+
+rootProject.name = 'JavaFXServices'
+
+

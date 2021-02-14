@@ -1,0 +1,104 @@
+.header {
+  -fx-background-color: -fx-header-color;
+}
+
+.header > .label {
+	-fx-pref-height:3.5em;
+	-fx-text-fill: white;
+}
+
+#lblTitle LabeledText {
+	-fx-font-size: 1.5em;
+}
+
+.mySearchList_grid {
+	-fx-background-color: linear-gradient(#328BDB 0%, #207BCF 25%, #1973C9 75%, #0A65BF 100%);
+}
+
+.newSearch_Header {
+	-fx-background-color: linear-gradient(#32DB82 0%, #20CF74 25%, #19C96F 75%, #0ABF64 100%);
+}
+
+.results_Header {
+	-fx-background-color: linear-gradient(#db328b 0%, #cf207b 25%, #c91973 75%, #bf0a65 100%);
+}
+
+.watchdogList_grid {
+	-fx-background-color: linear-gradient(#db328b 0%, #cf207b 25%, #c91973 75%, #bf0a65 100%);
+}
+
+.settingsHeader {
+	-fx-background-color: linear-gradient(#ff5400, #be1d00);
+}
+
+.button:armed .navigation_buttons {
+	-fx-background-color: yellow;
+}
+
+/* .button:armed .header_buttons {
+	-fx-background-color: yellow;
+}*/
+
+.button {
+	-fx-background-color: transparent;
+	-fx-text-fill: white;
+}
+
+.button:hover {
+	-fx-background-color: transparent;
+}
+
+.button Region {
+	-fx-background-color: white;
+}
+
+.button:hover {
+	-fx-text-fill: #EAEAEA;
+}
+
+.button:hover Region {
+	-fx-background-color: #EAEAEA;
+}
+
+.button:pressed {
+	-fx-text-fill: lightblue;
+}
+
+.button:pressed Region {
+	-fx-background-color: lightblue;
+}
+
+.icon_back_arrow {
+	-fx-shape: "M21.53,50.809L71.688,0.651c0,0,2.685-1.87,5.285,0.73c2.604,2.601,0,4.877,0,4.877l-44.63,44.631  l42.517,42.516c0,0,2.211,2.666-0.164,5.039c-2.373,2.375-5.688,0-5.688,0L21.53,50.809z";
+	-fx-pref-width: 1em;
+	-fx-min-width: 1em;
+	-fx-max-width: 1em;
+	-fx-pref-height: 1.6em;
+	-fx-min-height: 1.6em;
+	-fx-max-height: 1.6em;
+}
+
+.headerButton {
+	-fx-pref-width: 1.6em;
+	-fx-min-width: 1.6em;
+	-fx-max-width: 1.6em;
+	-fx-pref-height: 1.6em;
+	-fx-min-height: 1.6em;
+	-fx-max-height: 1.6em;
+}
+
+.leftButton {
+	-fx-alignment:  CENTER_LEFT;
+	-fx-padding: 0 1em;
+}
+
+
+.svg_menu  {
+		-fx-shape: "M3,6 L21,6 L21,8.015625 L3,8.015625 L3,6 Z M3,12.984375 L3,11.015625 L21,11.015625 L21,12.984375 L3,12.984375 Z M3,18 L3,15.984375 L21,15.984375 L21,18 L3,18 Z";
+		-fx-pref-width: 1.5em;
+		-fx-min-width: 1.5em;
+		-fx-max-width: 1.5em;
+		-fx-pref-height: 1.5em;
+		-fx-min-height: 1.5em;
+		-fx-max-height: 1.5em;
+}

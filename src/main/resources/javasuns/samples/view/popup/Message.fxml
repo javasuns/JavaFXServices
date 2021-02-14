@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:id="stackPane" alignment="TOP_CENTER" style="-fx-background-color: rgba(0, 0, 0, 0.1);" stylesheets="@Message.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javasuns.samples.controller.popup.MessageController">
+   <children>
+      <VBox fx:id="dialogPane" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity">
+         <children>
+            <Label fx:id="lblMessage" text="&lt;Text&gt;" textAlignment="CENTER" wrapText="true" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+   </children>
+</StackPane>

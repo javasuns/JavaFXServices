@@ -1,0 +1,11 @@
+#dialogPane {
+  -fx-padding: 4em 2em;
+}
+
+#dialogPane .label {
+  -fx-border-radius: 10;
+  -fx-background-radius: 10;
+  -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+  -fx-padding: 10;
+  -fx-background-color: white;
+}

@@ -1,0 +1,13 @@
+{
+  "images" : [
+    {
+      "idiom" : "iphone",
+      "filename" : "LaunchImage-750@2x~iphone6-portrait_750x1334.png",
+      "scale" : "2x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}
