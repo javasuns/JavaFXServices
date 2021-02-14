@@ -6,7 +6,7 @@ This software leverages the [Gluon Client plugin for Gradle](https://github.com/
 
 ## Screenshots
 
-<img src="https://bitbucket.org/javasuns/javafx-services/downloads/Windows_-_Native_Main.png?raw=1" width="160"/> <img src="https://bitbucket.org/javasuns/javafx-services/downloads/Windows_-_Native_Device.png?raw=1" width="160"/>
+<img src="https://user-images.githubusercontent.com/13131668/107875171-010b5800-6ec7-11eb-9318-afe4571bcf1a.png" width="160"/> <img src="https://bitbucket.org/javasuns/javafx-services/downloads/Windows_-_Native_Device.png?raw=1" width="160"/>
 <img src="https://bitbucket.org/javasuns/javafx-services/downloads/MacOS_X_-_Native_Main.png" width="160"/><img src="https://bitbucket.org/javasuns/javafx-services/downloads/MacOS_X_-_Native_Device.png" width="160"/>
 
 
