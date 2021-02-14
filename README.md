@@ -8,7 +8,7 @@ This software leverages the [Gluon Client plugin for Gradle](https://github.com/
 
 | Windows | MacOS X |  iOS  |
 | :----:  | :----:  | :----:|
-|<img src="https://user-images.githubusercontent.com/13131668/107875171-010b5800-6ec7-11eb-9318-afe4571bcf1a.png" width="120"/> <img src="https://user-images.githubusercontent.com/13131668/107875211-3f087c00-6ec7-11eb-9d8a-97f54acdd8f5.png" width="120"/>|<img src="https://user-images.githubusercontent.com/13131668/107875338-fb624200-6ec7-11eb-9609-0e6a07a0b764.png" width="120"/> <img src="https://user-images.githubusercontent.com/13131668/107875501-09649280-6ec9-11eb-8c33-4b94c4feba1b.png" width="120"/>|<img src="https://user-images.githubusercontent.com/13131668/107877660-7cc0d100-6ed6-11eb-8214-94f0cb8d1868.png" width="120"/> <img src="https://user-images.githubusercontent.com/13131668/107877664-81858500-6ed6-11eb-866e-b5895abebf45.png" width="120"/>
+|<img src="https://user-images.githubusercontent.com/13131668/107875171-010b5800-6ec7-11eb-9318-afe4571bcf1a.png" width="120"/> <img src="https://user-images.githubusercontent.com/13131668/107875211-3f087c00-6ec7-11eb-9d8a-97f54acdd8f5.png" width="120"/>|<img src="https://user-images.githubusercontent.com/13131668/107875338-fb624200-6ec7-11eb-9609-0e6a07a0b764.png" width="120"/> <img src="https://user-images.githubusercontent.com/13131668/107875501-09649280-6ec9-11eb-8c33-4b94c4feba1b.png" width="120"/>|<img src="https://user-images.githubusercontent.com/13131668/107877996-69af0080-6ed8-11eb-9816-908bf4eb94a7.png" width="120"/> <img src="https://user-images.githubusercontent.com/13131668/107877998-6ca9f100-6ed8-11eb-9676-42c2dad60caf.png" width="120"/>
 
 
 ## Getting started
