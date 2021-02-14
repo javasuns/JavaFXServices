@@ -54,7 +54,7 @@ Note that opening URLs through an External Browser is not yet supported for Desk
 Make sure that you have completed the list in build.info with the necessary information before compiling to iOS. 
 This task can be run only on MacOS (Read more at .....)
 
-Tasks for creating Mobile App are the same as Desktop Native Application. 
+Tasks for creating Mobile App are the same as Desktop Native Application.  
 You just need to add the **-ptarget=ios** parameter 
 
 Run:
