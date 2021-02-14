@@ -70,9 +70,9 @@ You just need to add the **-ptarget=ios** parameter
 
 Run:
 
-    ./gradlew nativeCompile -ptarget=ios
-    ./gradlew nativeLink -ptarget=ios
-    ./gradlew nativeRun -ptarget=ios
+    ./gradlew nativeCompile -Ptarget=ios
+    ./gradlew nativeLink -Ptarget=ios
+    ./gradlew nativeRun -Ptarget=ios
 
 Alternatively, you may combine all the above commands into one line
 
