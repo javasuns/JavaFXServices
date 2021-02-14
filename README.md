@@ -76,7 +76,7 @@ Run:
 
 Alternatively, you may combine all the above commands into one line
 
-    gradlew nativeBuild nativeRun -Ptarget=ios
+    ./gradlew nativeBuild nativeRun -Ptarget=ios
     
 ### Requirements
 
