@@ -1,122 +1,74 @@
 # JavaFX Services (Gradle)
 
-This software leverages the [Gluon Client plugin for Gradle](https://github.com/gluonhq/client-gradle-plugin) which is able to compile the application into native code along with its required dependencies, so it can directly be executed as a native application on the target platform. Cross-platform feature compatibility is achieved through [Gluon Attach](https://gluonhq.com/products/mobile/attach). The software utilizes some of its pre-built services (Browser, Device, Push Notifications and Share) 
+This software leverages the [Gluon Client plugin for Gradle](https://github.com/gluonhq/client-gradle-plugin) which is able to compile the application into native code along with its required dependencies, so it can directly be executed as a native application on the target platform. Cross-platform compatibility is achieved through [Gluon Attach](https://gluonhq.com/products/mobile/attach). The software utilizes some of its pre-built services (Browser, Device, Push Notifications and Share) 
 
 [![BSD-3 license](https://img.shields.io/badge/license-BSD--3-%230778B9.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
 
 ## Getting started
 
-To use the plugin, apply the following steps:
+To compile the software code in your desired platform you would need to apply the following steps:
 
-### 1. Apply the plugin
+### 1. Setting JAVA_HOME and GRAALVM_HOME
 
-Using the `plugins` DSL, add:
+GraalVM is mandatory for creating native apps. It is available for download on the [GraalVM website](https://www.graalvm.org/downloads/). If you have a JDK already installed on your PC, it would be a wise to place GraalVM binaries under the same Java directory for consolidation. 
+JavaFX Services app has been tested against OpenJDK version 11.0.2 and GraalVM Community Edition 21.0.
 
+**Windows Sample**
 
-    plugins {
-        id 'com.gluonhq.client-gradle-plugin' version '0.1.36'
-    }
-    
-This requires adding the plugin repository to the `settings.gradle` file:
+    JAVA_HOME=C:\Programs\Java\jdk-11.0.2
+    GRAALVM_HOME=C:\Programs\Java\graalvm-ce-java11-21.0.0
 
-    pluginManagement {
-        repositories {
-            maven {
-                url "https://nexus.gluonhq.com/nexus/content/repositories/releases"
-            }
-            
-            gradlePluginPortal()
-        }
-    }
-    rootProject.name = ...
+**MacOS X Sample**
 
-    
+    JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home
+    GRAALVM_HOME=/Library/Java/JavaVirtualMachines/graalvm-ce-java11-21.0.0/Contents/Home
 
 ### 2. Tasks
 
-You can run the regular tasks to build and run your project as a regular VM project:
+You can run the regular tasks to build and run your project as a regular Java project:
 
     ./gradlew clean build
     ./gradlew run
     
-Once the project is ready, the plugin has these three main tasks:    
+Once you are able to run the pure Java project, you proceed with the native taks:    
 
-#### `Compiling for Desktop`
+#### `Desktop Native Application`
 
 This tasks does the AOT compilation. It is a very intensive and lengthy task (several minutes, depending on your project and CPU).
 
 Run:
 
-    gradlew nativeBuild
+    gradlew nativeCompile  ======> AOT Compilation
+    gradlew nativeLink     ======> Generates native executable
+    gradlew nativeRun      ======> Runs the generated executable
+
+Alternatively, you may combine all the above commands into one line
+
+    gradlew nativeBuild nativeRun  ======> "nativeBuild" combines nativeCompile and nativeLink.
     
-#### `Compiling for Mobile (iOS)`
+Note that opening URLs through an External Browser is not yet supported for Desktop Native Apps [GraalVM Issue](https://github.com/oracle/graal/issues/2430).
+    
+#### `Mobile Native Application (iOS)`
 
 Make sure that you have completed the list in build.info with the necessary information before compiling to iOS. 
 This task can be run only on MacOS (Read more at .....)
 
-Run:
-
-    gradlew nativeBuild -ptarget=ios
-
-#### `nativeLink`
-
-When the object is created, this task will generate the native executable for the target platform.
+Tasks for creating Mobile App are the same as Desktop Native Application. 
+You just need to add the **-ptarget=ios** parameter 
 
 Run:
 
-    ./gradlew nativeLink
-    
-The results will be available at `$buildDir/client/$hostPlatform/$AppName`.
-    
-#### `nativeBuild`
+    gradlew nativeCompile -ptarget=ios
+    gradlew nativeLink -ptarget=ios
+    gradlew nativeRun -ptarget=ios
 
-This task simply combines `nativeCompile` and `nativeLink`.
+Alternatively, you may combine all the above commands into one line
 
-#### `nativeRun`
-
-Runs the executable in the target platform
-
-Run:
-
-    ./gradlew nativeRun
-    
-Or run the three tasks combined:
-
-    ./gradlew build nativeBuild nativeRun
-    
-Or run directly the application from command line:
-
-    build/client/$hostPlatform/$AppName/$AppName    
-    
-It will create a distributable native application.
-
-#### `nativePackage`
-
-On mobile only, create a package of the executable in the target platform
-
-Run:
-
-	./gradlew nativePackage
-
-On iOS, this can be used to create an IPA, on Android it will create an APK.
-
-
-#### `nativeInstall`
-
-On mobile only, installs the generated package that was created after `nativePackage`.
-
-Run:
-
-	./gradlew nativeInstall
+    gradlew nativeBuild nativeRun -ptarget=ios
     
 ### Requirements
 
 Check the requirements for the [target platform](https://docs.gluonhq.com/#_platforms) before you get started.
 
-## Issues and Contributions ##
 
-Issues can be reported to the [Issue tracker](https://github.com/gluonhq/client-gradle-plugin/issues)
-
-Contributions can be submitted via [Pull requests](https://github.com/gluonhq/client-gradle-plugin/pulls), 
-providing you have signed the [Gluon Individual Contributor License Agreement (CLA)](https://docs.google.com/forms/d/16aoFTmzs8lZTfiyrEm8YgMqMYaGQl0J8wA0VJE2LCCY).
