@@ -50,13 +50,13 @@ This task does the AOT compilation. It is a very intensive and lengthy task (sev
 
 Run:
 
-    ./gradlew nativeCompile  ======> AOT Compilation
-    ./gradlew nativeLink     ======> Generates native executable
-    ./gradlew nativeRun      ======> Runs the generated executable
+    ./gradlew nativeCompile  # AOT Compilation
+    ./gradlew nativeLink     # Generates native executable
+    ./gradlew nativeRun      # Runs the generated executable
 
 Alternatively, you may combine all the above commands into one:
 
-    gradlew nativeBuild nativeRun  ======> "nativeBuild" combines nativeCompile and nativeLink.
+    ./gradlew nativeBuild nativeRun  # "nativeBuild" combines nativeCompile and nativeLink.
     
 **Important Note:** Opening URLs through an External Browser is not yet supported for Desktop Native Apps [GraalVM Issue](https://github.com/oracle/graal/issues/2430).
     
