@@ -46,33 +46,33 @@ Once you are able to run the pure Java project, you proceed with the native taks
 
 #### `Desktop Native Application`
 
-This tasks does the AOT compilation. It is a very intensive and lengthy task (several minutes, depending on your project and CPU).
+This task does the AOT compilation. It is a very intensive and lengthy task (several minutes, depending on your project and CPU).
 
 Run:
 
-    gradlew nativeCompile  ======> AOT Compilation
-    gradlew nativeLink     ======> Generates native executable
-    gradlew nativeRun      ======> Runs the generated executable
+    ./gradlew nativeCompile  ======> AOT Compilation
+    ./gradlew nativeLink     ======> Generates native executable
+    ./gradlew nativeRun      ======> Runs the generated executable
 
-Alternatively, you may combine all the above commands into one line
+Alternatively, you may combine all the above commands into one:
 
     gradlew nativeBuild nativeRun  ======> "nativeBuild" combines nativeCompile and nativeLink.
     
-Note that opening URLs through an External Browser is not yet supported for Desktop Native Apps [GraalVM Issue](https://github.com/oracle/graal/issues/2430).
+**Important Note:** Opening URLs through an External Browser is not yet supported for Desktop Native Apps [GraalVM Issue](https://github.com/oracle/graal/issues/2430).
     
 #### `Mobile Native Application (iOS)`
 
-Make sure that you have completed the list in build.info with the necessary information before compiling to iOS. 
-This task can be run only on MacOS (Read more at .....)
+Make sure that you have filled in the iOS related information in build.info before compiling for iOS. 
+You should create an Apple ID before being able to run this task. For more information read [Gluon iOS Development](https://docs.gluonhq.com/#platforms_ios_deployment). This task can be run only on MacOS.
 
 Tasks for creating Mobile App are the same as Desktop Native Application.  
 You just need to add the **-ptarget=ios** parameter 
 
 Run:
 
-    gradlew nativeCompile -ptarget=ios
-    gradlew nativeLink -ptarget=ios
-    gradlew nativeRun -ptarget=ios
+    ./gradlew nativeCompile -ptarget=ios
+    ./gradlew nativeLink -ptarget=ios
+    ./gradlew nativeRun -ptarget=ios
 
 Alternatively, you may combine all the above commands into one line
 
